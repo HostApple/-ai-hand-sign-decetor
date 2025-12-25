@@ -10,8 +10,8 @@ you need to put the file into a folder then open command prompt in the folder's 
 
 
 
-
-# **py -3.10 -m venv handenv
+**
+# py -3.10 -m venv handenv
 # handenv\Scripts\activate
 # pip install opencv-python mediapipe pyautogui numpy
 # python ai_hand_control_final.py
