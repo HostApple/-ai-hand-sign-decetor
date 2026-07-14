@@ -37,7 +37,6 @@ wait_2h = 10.0
 
 def get_fngrs(pts):
     fngs = []
-    # thumb check
     fngs.append(pts[4].x < pts[3].x) 
     # others
     for tip, pip in [(8,6),(12,10),(16,14),(20,18)]:
@@ -82,8 +81,6 @@ while True:
 
         idx_x, idx_y = int(lmrk[8].x * fw), int(lmrk[8].y * fh)
         thmb_x, thmb_y = int(lmrk[4].x * fw), int(lmrk[4].y * fh)
-
-        # check pinch gap
         gap = np.hypot(thmb_x - idx_x, thmb_y - idx_y)
 
         # mouse move
@@ -102,7 +99,7 @@ while True:
             gest_timer["yt"] = None
             gest_timer["clk"] = None
 
-        # pinch to drag
+        # pinch to drag {currently doesnt work}
         elif gap < 30:
             if not is_dragn:
                 pyautogui.mouseDown()
